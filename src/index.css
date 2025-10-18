@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+    --border: 214 14% 90%;
+    --primary: 210 12% 16%;
+    --secondary: 210 11% 96%;
+    --muted: 210 11% 71%;
+    --accent: 214 100% 50%;
+  }
+
+  .dark {
+    --background: 222 14% 10%;
+    --foreground: 213 31% 91%;
+    --border: 217 14% 20%;
+    --primary: 213 31% 91%;
+    --secondary: 222 13% 13%;
+    --muted: 215 14% 60%;
+    --accent: 214 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
